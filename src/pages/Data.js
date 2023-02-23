@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { handleGetRequest } from "../services/GetTemplate";
+import { getAuth, signOut } from "firebase/auth";
 
 const Data = () => {
   useEffect(() => {
