@@ -2,8 +2,10 @@ import React, { useEffect } from "react";
 import { handleGetRequest } from "../services/GetTemplate";
 // import { googleLogout, useGoogleLogin } from '@react-oauth/google';
 import { GoogleLogin } from '@react-oauth/google';
+import { Link, useHistory } from 'react-router-dom';
 
 const Data1 = () => {
+  const history = useHistory();
   useEffect(() => {
     const res = handleGetRequest(
       "/todos/1"
@@ -22,6 +24,7 @@ const Data1 = () => {
   return (
     <>
       <h1>my data 1</h1>
+      <button onClick={() => history.push("data1")}>click here</button>
       <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
       
     </>

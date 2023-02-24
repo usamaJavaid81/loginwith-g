@@ -16,8 +16,8 @@ function App() {
       <div>hello usama</div>
       <Routes>
       <Route element={<Data1 />} path="/" />
-      {/* <Route element={<Data />} path="data" />
-      <Route element={<Data />} path="data1" exact /> */}
+      <Route element={<Data />} path="data" />
+      <Route element={<Data />} path="data1" exact />
       </Routes>
     </>
   );
